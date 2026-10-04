@@ -1,0 +1,32 @@
+/* Dashboard (index.php) — selaras palet merah/biru/hijau/amber aplikasi */
+
+/* Kartu statistik KKWU */
+.kartu[class*="stat-"] { position: relative; border-left: 0; transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s; }
+.kartu[class*="stat-"]:hover { transform: translateY(-3px); }
+.kartu[class*="stat-"]::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--acc); }
+.stat-cyan   { --acc: #2F5BB7; --acc-soft: rgba(47, 91, 183, .10); }
+.stat-red    { --acc: #E8412B; --acc-soft: rgba(232, 65, 43, .10); }
+.stat-purple { --acc: #7C4DDB; --acc-soft: rgba(124, 77, 219, .10); }
+.stat-amber  { --acc: #E89B0C; --acc-soft: rgba(232, 155, 12, .12); }
+.stat-ico { padding: 14px; border-radius: 14px; background: var(--acc-soft); color: var(--acc); }
+.stat-ico .ic { width: 1.35rem; height: 1.35rem; }
+
+/* Grafik */
+.grafik-wrap { height: 300px; }
+
+/* Badge peringkat Top 5 */
+.badge.rank-badge { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 800; }
+.badge.rank-1 { background: linear-gradient(135deg, #FBBF24, #E89B0C); color: white; box-shadow: 0 3px 8px rgba(232, 155, 12, .35); }
+.badge.rank-2 { background: linear-gradient(135deg, #B4BFCD, #94A3B8); color: white; }
+.badge.rank-3 { background: linear-gradient(135deg, #D08A4A, #B45309); color: white; }
+.badge.rank-n { background-color: #EEEDF4; color: #6F6C7D; }
+
+/* Header kartu peringatan stok */
+.kartu-head.head-stok { background: linear-gradient(135deg, #F2593F, #D6341F) !important; border-bottom: 0 !important; }
+
+/* Dashboard kasir/siswa */
+.kartu.hero-kasir { background: linear-gradient(135deg, #F2593F 0%, #E8412B 55%, #C93420 100%); color: white; border: 0; box-shadow: 0 14px 32px rgba(232, 65, 43, .30); position: relative; overflow: hidden; }
+.kartu.hero-kasir::after { content: ''; position: absolute; right: -60px; top: -80px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.22), rgba(255,255,255,0) 70%); pointer-events: none; }
+.avatar.avatar-hero { width: 64px; height: 64px; background: white; color: var(--merah); font-size: 1.6rem; font-weight: 800; border-radius: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+.btn.btn-masuk-kasir { color: var(--merah-tua) !important; position: relative; z-index: 1; }
+.btn.btn-masuk-kasir:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.2) !important; }

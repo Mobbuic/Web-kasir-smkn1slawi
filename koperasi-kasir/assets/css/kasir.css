@@ -1,0 +1,35 @@
+/* Kasir (kasir.php) — layar transaksi berhasil */
+.sukses.tampil { display: grid; place-items: center; background: radial-gradient(900px 500px at 50% -10%, rgba(47, 168, 79, .14), transparent 60%), var(--bg); }
+.sukses-inner { width: 100%; max-width: 880px; margin: 0; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1.05fr; gap: 1.25rem; text-align: left; align-items: stretch; animation: sukses-masuk .45s cubic-bezier(.2, .7, .3, 1) both; }
+@keyframes sukses-masuk { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+
+.sukses-left { background: #fff; border: 1px solid var(--garis-halus); border-radius: 20px; box-shadow: var(--shadow); padding: 2.2rem 1.6rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.ikon-sukses-modern { width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 1.2rem; color: #fff; background: linear-gradient(135deg, #3BB85C, #1E8A3E); box-shadow: 0 0 0 10px var(--hijau-soft), 0 12px 28px rgba(47, 168, 79, .35); animation: pop .5s .1s cubic-bezier(.3, 1.6, .5, 1) both; }
+.ikon-sukses-modern .ic { width: 2.8rem; height: 2.8rem; stroke-width: 3; }
+@keyframes pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.sukses-judul { color: #1e293b; letter-spacing: -.02em; }
+.sukses-left .sukses-untung { margin: .4rem 0 0; }
+
+.sukses-right { background: #fff; border: 1px solid var(--garis-halus); border-radius: 20px; box-shadow: var(--shadow); padding: 1.4rem; display: flex; flex-direction: column; justify-content: center; }
+.struk-card { background: #FBFAFD; border: 1px dashed #D8D5E4; border-radius: 14px; padding: .4rem 1.1rem; margin-bottom: 1rem; }
+.struk-item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: .75rem 0; border-bottom: 1px dashed var(--garis); }
+.struk-item:last-child { border-bottom: 0; }
+.struk-label { color: var(--redup); font-size: .84rem; font-weight: 600; }
+.struk-value { font-weight: 800; font-size: 1.02rem; font-variant-numeric: tabular-nums; text-align: right; }
+.struk-value.merah { color: var(--merah); font-size: 1.3rem; }
+
+.btn-grup-aksi { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+.btn-aksi-mini { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .35rem; padding: .8rem .4rem; background: #fff; border: 1px solid var(--garis); border-radius: 12px; color: var(--teks); font-size: .8rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform .15s, border-color .15s, background-color .15s, box-shadow .15s; }
+.btn-aksi-mini .ic { width: 1.3rem; height: 1.3rem; color: var(--redup); transition: color .15s; }
+.btn-aksi-mini:hover { border-color: var(--merah); background: var(--merah-soft); color: var(--merah-tua); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(232, 65, 43, .12); }
+.btn-aksi-mini:hover .ic { color: var(--merah); }
+
+.btn-transaksi-baru { display: flex; align-items: center; justify-content: center; gap: .5rem; width: 100%; padding: .95rem; border: 0; border-radius: 12px; background: linear-gradient(135deg, #F2593F, #E8412B 55%, #D6341F); color: #fff; font-weight: 700; font-size: 1rem; box-shadow: 0 1px 2px rgba(201, 52, 32, .35); transition: transform .15s, box-shadow .2s; }
+.btn-transaksi-baru:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(232, 65, 43, .32); }
+.btn-transaksi-baru:active { transform: scale(.98); }
+
+@media (max-width: 767.98px) {
+  .sukses-inner { grid-template-columns: 1fr; padding: 1rem; }
+  .sukses-left { padding: 1.6rem 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .sukses-inner, .ikon-sukses-modern { animation: none; } }
